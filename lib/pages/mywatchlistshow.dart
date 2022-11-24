@@ -45,7 +45,7 @@ class MyWatchlistShow extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold)),
                       TextSpan(text: '${mywatchlist.rating}/5\n'),
                       const TextSpan(
-                          text: 'Status: ',
+                          text: 'Status ditonton: ',
                           style: TextStyle(fontWeight: FontWeight.bold)),
                       TextSpan(
                           text: (mywatchlist.finished)
@@ -67,14 +67,14 @@ class MyWatchlistShow extends StatelessWidget {
       persistentFooterButtons: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue.shade400,
             minimumSize: const Size.fromHeight(50),
+            backgroundColor: Colors.blue.shade400,
           ),
           onPressed: () {
             Navigator.pop(context);
           },
           child: const Text(
-            'Back',
+            'Kembali',
             style: TextStyle(fontSize: 13),
           ),
         ),
