@@ -45,3 +45,60 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 5. Membuat fungsi decreament
 6. Mengubah teks pada _counter7 jadi genap dan ganjil
 7. Membuat button - dan melakuka konfigurasi
+
+ Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+ Navigator push - > melakukan push terhadap route yang diberikan ke navigator lalu mengembalikan hasil dari route tersebut.
+ Navigator replacemenr - > menggantikan route halaman dari navigator dengan cara melakukan push route yang diberikan ke navigator, lalu semua route di atasnya dihapus alias di reset
+
+ Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Padding : memberikan space terhadap antar komponen
+Text : untuk menampilkan string
+Column : menyusun widget secara vertikal
+Container : menampung widget yang lain
+ListTile : membuat sebuah listrile yang terurut
+Drawer :untuk navigasi aplikasi
+dropdown :  untuk dropdown
+
+ Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+onPressed: event ketika button ditekan
+onChanged: event ketika input value  terjadi perubahan
+onSaved: event ketika input disimpan
+onTap: event ketika widget merespon tap pengguna
+onLongPress: event ketika widget ditekan dalam jangka waktu lama
+onDoubleTap: event ketika widget merespon 2x tap dari pengguna
+onSubmit: event ketika input dilakukan submir
+
+ Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+1. Membuat drawer pada lib pada _drawer.dart
+2. Mmebuat file tambahbudget.dart dan databudget.dart serta melakukan singkronisasi dengan drawer
+3. Mmebuat budgetClass.dart sebagai objek data
+4. Melakukan impor pada main
+
+
+
+
+  Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+  Bisa, namun kurang efisien. Sebab ketika mencoba mengambil data tanpa model memerlukan waktu yang banyak sehingga tidak efisien serta hal tersebut susah untuk diimplementasikan.
+
+ Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.'
+ ListTile : membuat sebuah listrile yang terurut
+FutureBuilder: untuk ambil data dari API
+ListView: menampilkan list
+Scaffold :  memberikan tema material yang menjadi dasar dari tampilan android pada waktu artikel ini dibuat.
+Coloumn : menampilkan tampilan menyamping seperti kategori yang sering digunakan oleh programmer untuk membangun UI
+RichText: menmapilkan text serta stylenya
+Text: menampilkan text
+Checkbox: menampilkan checkbox
+
+ Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+ 1. menambahkan dependencies http ke flutter
+ 2. membuat model seperti model asal data
+ 3. melakukan http request ke web yang kita tuju
+ 4. melakukan pengolahan data tersebut serta menampilkanya pada GUI
+
+ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+ 1. membuat mywatchlist.dart, data_mywatchlist.dart
+ 2. pada data_mywatchlist.dart dilakukan request http pada web yang dituju
+ 3. menambahkan drawer yaitu bagian mywatchlist
+ 4. pada my watchlist, membuat tampilan dair model yang akan kita ambil dari web
+ 5. pada mywatchlistshow, membuat tampilam informasi dari data yang kita ambil
