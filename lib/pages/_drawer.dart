@@ -1,10 +1,12 @@
+import 'package:counter_7/pages/mywatchlist.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/pages/tambahBudget.dart';
 import 'package:counter_7/pages/dataBudget.dart';
 
 class drawerApp extends StatefulWidget {
-  const drawerApp({super.key});
+  var budget;
+  drawerApp({super.key, this.budget});
 
   @override
   State<drawerApp> createState() => _drawerApp();
@@ -53,7 +55,7 @@ class _drawerApp extends State<drawerApp> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (ctx) => const tambahBudget(),
+                  builder: (ctx) => const addBudgetPage(),
                 ),
               );
             },
@@ -68,7 +70,9 @@ class _drawerApp extends State<drawerApp> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (ctx) => const dataBudget(),
+                  builder: (ctx) => dataBudget(
+                    mydata: widget.budget,
+                  ),
                 ),
               );
             },
@@ -78,6 +82,15 @@ class _drawerApp extends State<drawerApp> {
             ),
             title: const Text("Data Budget"),
           ),
+          ListTile(
+            onTap: (() {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: ((context) => MyWatchlistPage())));
+            }),
+            leading: Icon(Icons.airline_seat_flat_outlined),
+            title: const Text("My Watch List"),
+          )
         ],
       ),
     );
