@@ -24,12 +24,12 @@ class _myWatchlistPageState extends State<MyWatchlistPage> {
             ),
           ),
           trailing: Checkbox(
-            value: item.finished,
             onChanged: (bool? newValue) {
               setState(() {
                 item.finished = !item.finished;
               });
             },
+            value: item.finished,
           ),
           onTap: () {
             Navigator.push(
@@ -40,7 +40,6 @@ class _myWatchlistPageState extends State<MyWatchlistPage> {
         );
 
     Card addCard(MyWatchlist item) => Card(
-          margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
           elevation: 7,
           shape: RoundedRectangleBorder(
             side: BorderSide(
@@ -52,6 +51,7 @@ class _myWatchlistPageState extends State<MyWatchlistPage> {
           child: Container(
             child: addListTile(item),
           ),
+          margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
         );
 
     return Scaffold(
@@ -69,12 +69,12 @@ class _myWatchlistPageState extends State<MyWatchlistPage> {
                 return Column(
                   children: const [
                     Text(
-                      "Watchlist Kosong",
+                      "Tidak ditemukan watchlist",
                       style: TextStyle(
                           color: Color.fromARGB(255, 11, 84, 194),
                           fontSize: 25),
                     ),
-                    SizedBox(height: 8),
+                    SizedBox(height: 15),
                   ],
                 );
               } else {
